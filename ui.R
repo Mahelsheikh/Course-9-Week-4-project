@@ -97,7 +97,13 @@ shinyUI(fluidPage(
                                 ),
                                 h5(
                                         "Graphical representation under the Plot tab and Numerical result under the result tab"
-                                )
+                                ),
+                                h5("link for the ui.R file is:"),
+                                helpText(a("ui.R file",href="https://github.com/Mahelsheikh/Course-9-Week-4-project/blob/master/ui.R",target="_blank")
+                                   ),
+                                h5("link for the server.R file is:"),
+                                helpText(a("Server.R file",href="https://github.com/Mahelsheikh/Course-9-Week-4-project/blob/master/server.R",target="_blank")
+                                   )
                         ),
                         tabPanel(
                                 h4("Plot"),
