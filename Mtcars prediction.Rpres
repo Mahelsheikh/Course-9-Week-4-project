@@ -1,0 +1,49 @@
+Mtcars prediction model
+========================================================
+author: Mahmoud Elsheikh
+date: March 2nd,2019
+
+Predection of Miles per (US) gallon:
+=========================================================
+* The [Link](https://mahelsheikh.shinyapps.io/mtcars_prediction_model/) to the shiny app
+* The App predicts the Miles per (US) gallon after setting certain variables.
+* These variables are:
+  + Number of cylinders  
+  + Displacement (cu.in.)  
+  + Gross horsepower  
+  + Rear axle ratio
+  + Weight (1000 lbs)
+  + 1/4 mile time
+  + Engine (0 = V-shaped, 1 = straight)
+  + Transmission (0 = automatic, 1 = manual)
+  + Number of forward gears
+  + Number of carburetors
+  
+Insight about the app:
+========================================================
+- Based on the mtcars data from the library datasets.  
+- A linear regression model is built on all variables in the data.
+- The application accepts entries for all variables then after clicking submit a prediction of the Mile per (US) gallon.
+- The result is shown graphically under the tab Plot.
+- Also shown numerically.
+  
+Prediction Model:
+========================================================
+Prediction model is built as follows:
+```{r, echo=TRUE}
+fit <- lm(mpg ~ ., data = mtcars)
+summary(fit)$coeff[,1]
+```
+
+For More details:
+========================================================
+For more details on the app code check the code in github:  
+  
+[ui.R code](https://github.com/Mahelsheikh/Course-9-Week-4-project/blob/master/ui.R)  
+  
+[server.R code](https://github.com/Mahelsheikh/Course-9-Week-4-project/blob/master/server.R)  
+
+
+
+
+
