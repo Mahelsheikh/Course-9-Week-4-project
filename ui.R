@@ -1,6 +1,7 @@
 
 
 library(shiny)
+library(plotly)
 shinyUI(fluidPage(
         titlePanel("Mtcars prediction model"),
         sidebarLayout(
